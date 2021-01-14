@@ -9,6 +9,7 @@ function Vendor_Registration() {
       style={{
         display: "flex",
         flexDirection: "column",
+        
       }}
     >
       <Tabs />
@@ -18,11 +19,15 @@ function Vendor_Registration() {
           display: "flex",
           flexDirection: "Row",
           justifyContent: 'left',
+          
         }}
       >
         <div>
          
           <Paper elevation={3}>
+            <Typography variant="caption" style={{fontSize:'20px',color:'gray'}} >
+              Basic Details
+            </Typography>
       
           <div
             style={{
@@ -30,7 +35,7 @@ function Vendor_Registration() {
               
               margin: "0px 10px 0px 20px",
               
-              height: "65vh",
+              height: "75vh",
               flexDirection: "column",
               width: "25vw",
               padding: "0px 10px 10px 10px",
@@ -49,7 +54,7 @@ function Vendor_Registration() {
        
           
         </div>
-        <div style={{display:'flex',flexDirection:'column',height:'65vh',justifyContent:'space-between'}}>
+        <div style={{display:'flex',flexDirection:'column',height:'79vh',justifyContent:'space-between'}}>
         <div>
           
           <Paper
@@ -59,13 +64,16 @@ function Vendor_Registration() {
              
               padding: "0px 10px 20px 20px",
               marginLeft: "10px",
-              height: "30vh",
+              height: "37vh",
               flexDirection: "column",
               width: "25vw",
               justifyContent: "space-between",
               backgroundColor: "white",
             }}
           >
+              <Typography variant="caption" style={{fontSize:'20px',color:'gray'}} >
+              Residential Address
+            </Typography>
             <div
               style={{
                 display: "flex",
@@ -111,13 +119,16 @@ function Vendor_Registration() {
             padding: "0px 10px 10px 20px",
             marginRight: "20px",
             marginLeft:'10px',
-            height: "30vh",
+            height: "37vh",
             flexDirection: "column",
             width: "25vw",
             justifyContent: "space-between",
             backgroundColor: "white",
           }}
         >
+            <Typography variant="caption" style={{fontSize:'20px',color:'gray'}} >
+              Mailling Address
+            </Typography>
           <div
             style={{
              
