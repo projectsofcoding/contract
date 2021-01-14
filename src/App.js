@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import AppBar from './components/Appbar';
+import Drawer from './components/Drawer';
+
+import Screen_Manager from './components/Screen_Manager';
 
 function App() {
+  const [isDrawerOpen, setisDrawerOpen] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <AppBar  setisDrawerOpen={setisDrawerOpen} isDrawerOpen={isDrawerOpen}/>
+     <div >
+        <Drawer  isDrawerOpen={isDrawerOpen} setisDrawerOpen={setisDrawerOpen} />
+     </div>
+     
+    
+     
+    <Screen_Manager isDrawerOpen={isDrawerOpen}/>
     </div>
   );
 }
