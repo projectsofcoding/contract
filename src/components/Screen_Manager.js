@@ -4,11 +4,11 @@ import FormsScreen from './FormsScreen'
 import Vendor_Registration from './Vendor_Registration'
 
 
-function Screen_Manager({isDrawerOpen,currentScreen}) {
+function Screen_Manager({isDrawerOpen,currentScreen,currentForm,setcurrentForm}) {
     const screen=()=>{
         switch (currentScreen) {
             case "forms":
-              return <FormsScreen />
+              return <FormsScreen currentForm={currentForm} setcurrentForm={setcurrentForm} />
                 
                 break;
             case "vendor_registration":
@@ -21,6 +21,7 @@ function Screen_Manager({isDrawerOpen,currentScreen}) {
         }
 
     }
+   
     return (
         <div style={isDrawerOpen ? {marginLeft:'240px',transition:transitions.create(['margin', 'width'], {
             easing: transitions.easing.easeOut,
@@ -29,8 +30,8 @@ function Screen_Manager({isDrawerOpen,currentScreen}) {
             easing: transitions.easing.sharp,
             duration: transitions.duration.leavingScreen,
           }),}}>
-
-        
+            
+           
           {screen()}
             
             

@@ -10,12 +10,7 @@ import DateFnsUtils from "@date-io/date-fns";
 
 //Attachment D
 
-function Form1() {
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-
-    const handleDateChange = (date) => {
-      setSelectedDate(date);
-    };
+function AttachmentE() {
   return (
     <div
       style={{
@@ -29,19 +24,13 @@ function Form1() {
     >
       <Paper elevation={3} style={{width:'100%',padding:'10px',backgroundColor:'white',marginBottom:'20px'}}>
       <Typography style={{fontWeight:"bold",marginBottom:'10px'}} align="left">
-        By signing this form, you certify that your company obtains Registry of
-        Motor Vehicle (RMV) history reports for all drivers, either the attested
-        or unattested version from the Massachusetts Registry of Motor Vehicles
-        or the equivalent from another state, if applicable, and that your
-        company obtains Criminal Offender Record Information (CORI) reports on
-        all employees prior to contact with agency consumers and annually
-        thereafter
+      Electronic Invoice Cover Sheet Approval Form for Vendor Portal Billing
+      
+       
       </Typography>
      
-      <Typography align="left" style={{fontWeight:"bold"}}  fontFamily="Monospace" >Please indicate below your company's designated CORI Certified
-        individual, who is responsible for requesting CORI's and ensuring
-        employment decisions are consistent with EOHHS CORI requirements
-        specified in 101CMR 15.00.
+      <Typography align="left" style={{fontWeight:"bold"}}  fontFamily="Monospace" >
+      Please indicate below the names of additional persons that your company authorizes in the Vendor Portal to electronically
       </Typography>
       </Paper>
       
@@ -56,7 +45,7 @@ function Form1() {
       >
         <TextField
           id="filled-basic"
-          label="Name and title of CORI individual"
+          label="Name and title of Authorized person"
           variant="filled"
         />
         <TextField
@@ -64,28 +53,9 @@ function Form1() {
           label="Signature of Chief Executive Officer/Owner or Designated Representative"
           variant="filled"
         />
-        <TextField id="filled-basic" label="Company Name" variant="filled" />
-        <TextField
-          id="filled-basic"
-          label="Name of Chief Executive Officer/Owner or Designated Representative"
-          variant="filled"
-        />
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-          <KeyboardDatePicker
-            disableToolbar 
-            variant="inline"
-            format="MM/dd/yyyy"
-            margin="normal"
-            value={selectedDate}
-            onChange={handleDateChange}
-            id="date-picker-inline"
-            label="Date "
-            style={{ backgroundColor: "whitesmoke" }}
-            KeyboardButtonProps={{
-              "aria-label": "change date",
-            }}
-          />
-        </MuiPickersUtilsProvider>
+       
+       
+       
       </div>
       <Fab
         color="primary"
@@ -102,6 +72,14 @@ function Form1() {
         Submit
         <NavigateNextIcon />
       </Fab>
+      <div>
+          <Typography align="left" style={{color:'Red', position: "absolute",
+         bottom: "45px",
+         marginLeft:'20px',
+        }}>
+           **This form is to be processed if someone other than the Chief Executive Office/Owner or Designated Representative is being authorized to submit the finalized invoice coversheets. The authorized individuals indicated above will be the only electronic signatures accepted.
+          </Typography>
+      </div>
       <div style={{
          position: "absolute",
          bottom: "5px",
@@ -120,4 +98,4 @@ function Form1() {
   );
 }
 
-export default Form1;
+export default AttachmentE;

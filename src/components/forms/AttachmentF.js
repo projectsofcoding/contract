@@ -1,4 +1,4 @@
-import { Fab, Paper, TextField, Typography } from "@material-ui/core";
+import { Checkbox, Fab, Paper, TextField, Typography } from "@material-ui/core";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import React from "react";
 import "date-fns";
@@ -10,8 +10,8 @@ import DateFnsUtils from "@date-io/date-fns";
 
 //Attachment D
 
-function Form1() {
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+function AttachmentF() {
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 
     const handleDateChange = (date) => {
       setSelectedDate(date);
@@ -27,21 +27,18 @@ function Form1() {
         flexDirection: "column",
       }}
     >
-      <Paper elevation={3} style={{width:'100%',padding:'10px',backgroundColor:'white',marginBottom:'20px'}}>
+      <Paper elevation={3} style={{width:'100%',padding:'5px 0px 0px 10px',backgroundColor:'white',marginBottom:'5px'}}>
       <Typography style={{fontWeight:"bold",marginBottom:'10px'}} align="left">
-        By signing this form, you certify that your company obtains Registry of
-        Motor Vehicle (RMV) history reports for all drivers, either the attested
-        or unattested version from the Massachusetts Registry of Motor Vehicles
-        or the equivalent from another state, if applicable, and that your
-        company obtains Criminal Offender Record Information (CORI) reports on
-        all employees prior to contact with agency consumers and annually
-        thereafter
+      Electronic Invoice Cover Sheet Approval Form for Vendor Portal Billing
+      
+       
       </Typography>
+      </Paper>
+      <Paper elevation={3}  style={{width:'100%',padding:'5px 0px 0px 10px',backgroundColor:'white',marginBottom:'20px'}}>
      
-      <Typography align="left" style={{fontWeight:"bold"}}  fontFamily="Monospace" >Please indicate below your company's designated CORI Certified
-        individual, who is responsible for requesting CORI's and ensuring
-        employment decisions are consistent with EOHHS CORI requirements
-        specified in 101CMR 15.00.
+      <Typography align="left" style={{fontWeight:"bold",color:'red'}}  fontFamily="Monospace" >
+      If this Agreement is terminated without inspection, review or audit, MART retains the right to conduct an inspection, review or audit and to disallow reimbursement and/or recover funds if any finding warrants such action.
+
       </Typography>
       </Paper>
       
@@ -54,20 +51,20 @@ function Form1() {
           justifyContent: "flex-start",
         }}
       >
-        <TextField
-          id="filled-basic"
-          label="Name and title of CORI individual"
-          variant="filled"
-        />
+        
         <TextField
           id="filled-basic"
           label="Signature of Chief Executive Officer/Owner or Designated Representative"
           variant="filled"
         />
-        <TextField id="filled-basic" label="Company Name" variant="filled" />
-        <TextField
+         <TextField
           id="filled-basic"
           label="Name of Chief Executive Officer/Owner or Designated Representative"
+          variant="filled"
+        />
+         <TextField
+          id="filled-basic"
+          label="Title"
           variant="filled"
         />
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -76,16 +73,19 @@ function Form1() {
             variant="inline"
             format="MM/dd/yyyy"
             margin="normal"
+            id="date-picker-inline"
             value={selectedDate}
             onChange={handleDateChange}
-            id="date-picker-inline"
-            label="Date "
+            label="Signed under the pains and penalties of perjury on this date"
             style={{ backgroundColor: "whitesmoke" }}
             KeyboardButtonProps={{
               "aria-label": "change date",
             }}
           />
         </MuiPickersUtilsProvider>
+       
+       
+       
       </div>
       <Fab
         color="primary"
@@ -102,6 +102,20 @@ function Form1() {
         Submit
         <NavigateNextIcon />
       </Fab>
+      <div style={{display:'flex' , flexDirection:'row',alignItems:'center', position: "absolute",
+         bottom: "65px",
+         marginLeft:'12px',}}>
+      <Checkbox
+        checked={true}
+        onChange={null}
+        style={{color:'green'}}
+        inputProps={{ 'aria-label': 'primary checkbox' }}
+      />
+      <Typography align='left' style={{fontWeight:'bold'}} >
+      I have read, fully understand and accept the above Termination Clauses.
+
+      </Typography>
+      </div>
       <div style={{
          position: "absolute",
          bottom: "5px",
@@ -120,4 +134,4 @@ function Form1() {
   );
 }
 
-export default Form1;
+export default AttachmentF;

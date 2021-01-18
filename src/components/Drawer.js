@@ -88,6 +88,8 @@ export default function PersistentDrawerLeft({
   setisDrawerOpen,
   setcurrentScreen,
   currentScreen,
+  currentForm,
+  setcurrentForm
 }) {
   const classes = useStyles();
   const theme = useTheme();
@@ -146,7 +148,7 @@ export default function PersistentDrawerLeft({
             <ListItemText primary={"forms"} />
           </ListItem>
           <Collapse in={subListOpen} timeout="auto" unmountOnExit>
-            <FormGenerator />
+            <FormGenerator currentForm={currentForm} setcurrentForm={setcurrentForm}  />
           </Collapse>
           <ListItem
             style={
