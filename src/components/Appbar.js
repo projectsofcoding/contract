@@ -15,7 +15,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Screen_Manager from './Screen_Manager';
+
 const drawerWidth=240;
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   appBar: {
+    backgroundColor:'limegreen',
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBarShift: {
+    backgroundColor:'limegreen',
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
